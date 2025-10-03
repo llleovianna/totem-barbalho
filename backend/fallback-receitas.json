@@ -1,0 +1,42 @@
+[
+  {
+    "id": "feijao-carioca-premium-1kg-1",
+    "titulo": "Feijão Carioca Premium Barbalho Refogado*",
+    "descricao": "Feijão carioca premium cozido com temperos tradicionais.",
+    "ingredientes": ["2 xícaras de Feijão Carioca Premium Barbalho", "1 cebola picada", "2 dentes de alho", "1 folha de louro", "Sal a gosto", "Água"],
+    "instrucoes": ["Deixe o feijão de molho por 8h.", "Cozinhe na panela de pressão por 25 min.", "Refogue cebola e alho, junte ao feijão.", "Tempere com sal e louro, ferva por 10 min.", "Sirva quente."],
+    "dicas": ["Deixe de molho para cozinhar mais rápido.", "Use louro para realçar o sabor.", "Sirva com arroz Barbalho.", "Adicione bacon para um toque especial."],
+    "tempoPreparo": "40 minutos",
+    "dificuldade": "Fácil",
+    "porcoes": "6 porções",
+    "categoria": "almoço",
+    "produto": "Feijão Carioca Premium Barbalho"
+  },
+  {
+    "id": "feijao-carioca-premium-1kg-2",
+    "titulo": "Feijão Tropeiro Barbalho*",
+    "descricao": "Receita tradicional mineira com feijão carioca premium.",
+    "ingredientes": ["2 xícaras de Feijão Carioca Premium Barbalho", "200g de bacon", "2 ovos", "1 cebola", "Farinha de mandioca Barbalho", "Sal e cheiro-verde"],
+    "instrucoes": ["Cozinhe o feijão.", "Frite o bacon, junte cebola e ovos.", "Adicione o feijão e misture.", "Coloque farinha aos poucos.", "Finalize com cheiro-verde."],
+    "dicas": ["Sirva com arroz branco.", "Adicione linguiça para mais sabor.", "Use farinha Barbalho para melhor textura.", "Finalize com pimenta a gosto."],
+    "tempoPreparo": "45 minutos",
+    "dificuldade": "Média",
+    "porcoes": "5 porções",
+    "categoria": "almoço",
+    "produto": "Feijão Carioca Premium Barbalho"
+  },
+  {
+    "id": "feijao-carioca-premium-1kg-3",
+    "titulo": "Caldo de Feijão Barbalho*",
+    "descricao": "Caldo cremoso de feijão carioca premium para dias frios.",
+    "ingredientes": ["2 xícaras de Feijão Carioca Premium Barbalho", "1 batata", "1 cenoura", "1 cebola", "2 dentes de alho", "Sal e pimenta"],
+    "instrucoes": ["Cozinhe o feijão com batata e cenoura.", "Bata tudo no liquidificador.", "Refogue cebola e alho, junte ao caldo.", "Tempere e ferva por 10 min.", "Sirva quente com torradas."],
+    "dicas": ["Adicione bacon para mais sabor.", "Sirva com cheiro-verde.", "Ideal para noites frias.", "Acompanhe com pão."],
+    "tempoPreparo": "50 minutos",
+    "dificuldade": "Fácil",
+    "porcoes": "4 porções",
+    "categoria": "jantar",
+    "produto": "Feijão Carioca Premium Barbalho"
+  }
+  
+]

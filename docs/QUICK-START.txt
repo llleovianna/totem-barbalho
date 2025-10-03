@@ -1,0 +1,37 @@
+# ============================================
+#     🚀 TOTEM BARBALHO - GUIA RÁPIDO
+# ============================================
+
+## 🎯 INICIAR SISTEMA (ESCOLHA UMA OPÇÃO):
+
+### Opção 1: Windows - Clique Duplo
+📁 Clique duplo no arquivo: start.bat
+
+### Opção 2: PowerShell
+.\start.ps1
+
+### Opção 3: NPM (depois de configurar)
+npm start
+
+### Opção 4: Manual
+# Terminal 1:
+cd backend && npm start
+
+# Terminal 2: 
+cd frontend && npm start
+
+## 🔑 CONFIGURAÇÃO OBRIGATÓRIA:
+1. Obter chave API: https://makersuite.google.com/app/apikey
+2. Editar: backend/.env
+3. Adicionar: GEMINI_API_KEY=AIzaSyA3TW_hG5btEfXuw1pZucbRQGA94qo3-iU-iU
+
+## 🌐 ACESSAR:
+Frontend: http://localhost:3001
+Backend:  http://localhost:3000
+
+## ❓ PROBLEMAS:
+- Erro de porta: Feche outros Node.js rodando
+- Erro de dependências: Delete node_modules e rode npm install
+- Erro de API: Verifique a chave no .env
+
+✨ Sistema pronto para feiras e eventos!
