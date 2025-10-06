@@ -11,12 +11,16 @@
     "install:backend": "cd backend && npm install",
     "install:frontend": "cd frontend && npm install",
     "build": "cd frontend && npm run build",
+    "build:production": "node scripts/build-production.js",
+    "dist": "npm run build:production && electron-builder",
+    "dist:win": "npm run build:production && electron-builder --win --x64",
     "setup": "npm run install:all && npm run check-env",
     "check-env": "node scripts/check-env.js",
     "dev": "concurrently --kill-others \"npm run start:backend\" \"npm run start:frontend\"",
     "stop": "taskkill /f /im node.exe",
     "build:electron": "npm run build && electron-builder",
-    "start:electron": "npm run build && electron ."
+    "start:electron": "cross-env NODE_ENV=production electron .",
+    "dev:electron": "cross-env NODE_ENV=development electron ."
   },
   "devDependencies": {
     "concurrently": "^8.2.0",
@@ -40,6 +44,7 @@
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^7.0.1",
     "@fortawesome/react-fontawesome": "^3.0.2",
+    "dotenv": "^17.2.3",
     "file-saver": "^2.0.5",
     "node-forge": "^1.3.1",
     "qrcode.react": "^4.2.0",
@@ -48,17 +53,67 @@
   "build": {
     "appId": "com.barbalho.totem",
     "productName": "Totem Barbalho",
+    "asar": false,
+    "compression": "normal",
+    "afterPack": "scripts/afterPack.js",
     "files": [
       "backend/**/*",
+      "!backend/node_modules/**/*",
       "frontend/build/**/*",
+      "!frontend/src/**/*",
+      "!frontend/public/**/*",
+      "!frontend/node_modules/**/*",
+      "!frontend/package*.json",
+      "!frontend/tsconfig.json",
+      "!frontend/.gitignore",
       "electron-main.js",
-      "package.json"
+      "preload.js",
+      "package.json",
+      "!ignore/**/*",
+      "!.git/**/*",
+      "!.github/**/*",
+      "!.vscode/**/*",
+      "!docs/**/*",
+      "!scripts/**/*",
+      "!ssl/**/*",
+      "!node_modules/**/*",
+      "!dist/**/*",
+      "!*.md",
+      "!.gitignore",
+      "!.env.example",
+      "!BUILD*.md",
+      "!COMO_USAR.md",
+      "!CHANGELOG*.md",
+      "!PROXIMOS_PASSOS.md"
     ],
     "directories": {
-      "buildResources": "assets"
+      "buildResources": "assets",
+      "output": "dist"
     },
     "win": {
-      "target": "nsis"
-    }
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.ico",
+      "artifactName": "${productName}-Setup-${version}.${ext}",
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico",
+      "installerHeaderIcon": "assets/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Totem Barbalho",
+      "license": "LICENSE.txt"
+    },
+    "extraResources": []
   }
 }

@@ -1,42 +1,939 @@
 [
   {
-    "id": "feijao-carioca-premium-1kg-1",
-    "titulo": "Feijão Carioca Premium Barbalho Refogado*",
-    "descricao": "Feijão carioca premium cozido com temperos tradicionais.",
-    "ingredientes": ["2 xícaras de Feijão Carioca Premium Barbalho", "1 cebola picada", "2 dentes de alho", "1 folha de louro", "Sal a gosto", "Água"],
-    "instrucoes": ["Deixe o feijão de molho por 8h.", "Cozinhe na panela de pressão por 25 min.", "Refogue cebola e alho, junte ao feijão.", "Tempere com sal e louro, ferva por 10 min.", "Sirva quente."],
-    "dicas": ["Deixe de molho para cozinhar mais rápido.", "Use louro para realçar o sabor.", "Sirva com arroz Barbalho.", "Adicione bacon para um toque especial."],
-    "tempoPreparo": "40 minutos",
+    "id": "feijao-carioca-premium-1",
+    "titulo": "Feijão Carioca Premium Refogado Tradicional*",
+    "descricao": "Feijão carioca premium cozido com temperos tradicionais da casa.",
+    "ingredientes": [
+      "2 xícaras de Feijão Carioca Premium Barbalho",
+      "1 cebola média picada",
+      "3 dentes de alho amassados",
+      "2 folhas de louro",
+      "1 colher (sopa) de óleo",
+      "Sal a gosto",
+      "Pimenta-do-reino a gosto",
+      "Cheiro-verde picado",
+      "6 xícaras de água"
+    ],
+    "instrucoes": [
+      "Deixe o feijão de molho em água filtrada por 8 horas ou durante a noite.",
+      "Escorra e lave o feijão em água corrente.",
+      "Coloque na panela de pressão com 6 xícaras de água e as folhas de louro.",
+      "Cozinhe por 25 minutos após pegar pressão.",
+      "Em uma panela à parte, refogue a cebola e o alho no óleo até dourarem.",
+      "Adicione 2 conchas de feijão cozido ao refogado e amasse levemente.",
+      "Retorne essa mistura ao feijão, tempere com sal e pimenta.",
+      "Ferva por mais 10 minutos para apurar o sabor.",
+      "Finalize com cheiro-verde picado.",
+      "Sirva quente acompanhado de arroz Barbalho."
+    ],
+    "dicas": [
+      "Deixar de molho reduz o tempo de cozimento e melhora a digestão.",
+      "Use louro para realçar o sabor tradicional.",
+      "Sirva com arroz branco, farofa e bisteca para uma refeição completa.",
+      "Adicione bacon frito para um toque especial.",
+      "Congele porções individuais para refeições rápidas."
+    ],
+    "tempoPreparo": "50 minutos",
     "dificuldade": "Fácil",
     "porcoes": "6 porções",
     "categoria": "almoço",
     "produto": "Feijão Carioca Premium Barbalho"
   },
   {
-    "id": "feijao-carioca-premium-1kg-2",
-    "titulo": "Feijão Tropeiro Barbalho*",
-    "descricao": "Receita tradicional mineira com feijão carioca premium.",
-    "ingredientes": ["2 xícaras de Feijão Carioca Premium Barbalho", "200g de bacon", "2 ovos", "1 cebola", "Farinha de mandioca Barbalho", "Sal e cheiro-verde"],
-    "instrucoes": ["Cozinhe o feijão.", "Frite o bacon, junte cebola e ovos.", "Adicione o feijão e misture.", "Coloque farinha aos poucos.", "Finalize com cheiro-verde."],
-    "dicas": ["Sirva com arroz branco.", "Adicione linguiça para mais sabor.", "Use farinha Barbalho para melhor textura.", "Finalize com pimenta a gosto."],
+    "id": "feijao-carioca-premium-2",
+    "titulo": "Feijão Tropeiro Mineiro Autêntico*",
+    "descricao": "Receita tradicional mineira com feijão carioca, bacon e farinha.",
+    "ingredientes": [
+      "3 xícaras de Feijão Carioca Premium Barbalho cozido",
+      "200g de bacon em cubos",
+      "200g de linguiça calabresa",
+      "3 ovos",
+      "1 cebola grande picada",
+      "2 dentes de alho",
+      "2 xícaras de Farinha de Mandioca Barbalho",
+      "Sal e cheiro-verde",
+      "Pimenta-do-reino a gosto"
+    ],
+    "instrucoes": [
+      "Cozinhe o feijão e reserve (escorrido).",
+      "Frite o bacon até ficar crocante e reserve.",
+      "Na mesma gordura, frite a linguiça em rodelas.",
+      "Adicione cebola e alho, refogando bem.",
+      "Quebre os ovos diretamente na panela e mexa até cozinharem.",
+      "Adicione o feijão cozido e o bacon.",
+      "Vá adicionando a farinha aos poucos, mexendo sempre.",
+      "Tempere com sal e pimenta a gosto.",
+      "Finalize com bastante cheiro-verde picado.",
+      "Sirva quente como prato principal."
+    ],
+    "dicas": [
+      "A farinha deve ficar solta, não empapada.",
+      "Experimente adicionar couve refogada.",
+      "Sirva com arroz branco e vinagrete.",
+      "Use linguiça artesanal para mais sabor.",
+      "Pode substituir ovos por ovos de codorna."
+    ],
     "tempoPreparo": "45 minutos",
     "dificuldade": "Média",
-    "porcoes": "5 porções",
+    "porcoes": "8 porções",
     "categoria": "almoço",
     "produto": "Feijão Carioca Premium Barbalho"
   },
   {
-    "id": "feijao-carioca-premium-1kg-3",
-    "titulo": "Caldo de Feijão Barbalho*",
-    "descricao": "Caldo cremoso de feijão carioca premium para dias frios.",
-    "ingredientes": ["2 xícaras de Feijão Carioca Premium Barbalho", "1 batata", "1 cenoura", "1 cebola", "2 dentes de alho", "Sal e pimenta"],
-    "instrucoes": ["Cozinhe o feijão com batata e cenoura.", "Bata tudo no liquidificador.", "Refogue cebola e alho, junte ao caldo.", "Tempere e ferva por 10 min.", "Sirva quente com torradas."],
-    "dicas": ["Adicione bacon para mais sabor.", "Sirva com cheiro-verde.", "Ideal para noites frias.", "Acompanhe com pão."],
-    "tempoPreparo": "50 minutos",
+    "id": "feijao-preto-1",
+    "titulo": "Feijoada Completa Brasileira*",
+    "descricao": "A tradicional feijoada com feijão preto e carnes defumadas.",
+    "ingredientes": [
+      "500g de Feijão Preto Barbalho",
+      "300g de costela suína",
+      "200g de linguiça calabresa",
+      "150g de bacon",
+      "100g de paio",
+      "2 cebolas picadas",
+      "5 dentes de alho",
+      "3 folhas de louro",
+      "Sal e pimenta",
+      "Cheiro-verde"
+    ],
+    "instrucoes": [
+      "Deixe o feijão de molho por 12 horas.",
+      "Cozinhe as carnes defumadas separadamente por 30 minutos.",
+      "Escorra o feijão e cozinhe na panela de pressão com louro por 30 minutos.",
+      "Refogue cebola e alho, adicione as carnes cortadas.",
+      "Junte ao feijão cozido e deixe apurar por 40 minutos.",
+      "Tempere com sal e pimenta a gosto.",
+      "Amasse alguns grãos de feijão para engrossar o caldo.",
+      "Deixe descansar por 15 minutos antes de servir.",
+      "Finalize com cheiro-verde.",
+      "Sirva com arroz, farofa, couve e laranja."
+    ],
+    "dicas": [
+      "Prepare no dia anterior para melhor sabor.",
+      "Use carnes variadas para feijoada completa.",
+      "Sirva com caipirinha de limão.",
+      "Congele em porções para ocasiões especiais.",
+      "Acompanhe com molho de pimenta caseiro."
+    ],
+    "tempoPreparo": "2 horas",
+    "dificuldade": "Média",
+    "porcoes": "12 porções",
+    "categoria": "almoço",
+    "produto": "Feijão Preto Barbalho"
+  },
+  {
+    "id": "feijao-preto-2",
+    "titulo": "Tutu de Feijão à Mineira*",
+    "descricao": "Tutu cremoso de feijão preto com farinha de mandioca.",
+    "ingredientes": [
+      "3 xícaras de Feijão Preto Barbalho cozido",
+      "1 xícara de Farinha de Mandioca Barbalho",
+      "100g de bacon",
+      "3 dentes de alho",
+      "1 cebola",
+      "Sal e pimenta",
+      "Cheiro-verde",
+      "2 colheres (sopa) de óleo"
+    ],
+    "instrucoes": [
+      "Bata o feijão cozido com seu caldo no liquidificador até ficar cremoso.",
+      "Frite o bacon até ficar crocante.",
+      "Refogue alho e cebola no óleo.",
+      "Adicione o feijão batido e deixe ferver.",
+      "Vá adicionando a farinha aos poucos, mexendo sempre.",
+      "Cozinhe até engrossar (consistência de purê).",
+      "Tempere com sal e pimenta.",
+      "Finalize com bacon crocante por cima.",
+      "Polvilhe cheiro-verde.",
+      "Sirva quente com torresmo e couve."
+    ],
+    "dicas": [
+      "A consistência deve ser cremosa, não seca.",
+      "Sirva com bisteca de porco e couve.",
+      "Adicione linguiça frita picada.",
+      "Experimente com ovo frito por cima.",
+      "Ótimo acompanhamento para churrasco."
+    ],
+    "tempoPreparo": "40 minutos",
+    "dificuldade": "Fácil",
+    "porcoes": "6 porções",
+    "categoria": "almoço",
+    "produto": "Feijão Preto Barbalho"
+  },
+  {
+    "id": "feijao-vermelho-1",
+    "titulo": "Salada de Feijão Vermelho Nutritiva*",
+    "descricao": "Salada fresca e colorida com feijão vermelho e vegetais.",
+    "ingredientes": [
+      "2 xícaras de Feijão Vermelho Barbalho cozido",
+      "1 tomate picado",
+      "1 pimentão amarelo",
+      "1 cebola roxa",
+      "1 cenoura ralada",
+      "Azeite de oliva",
+      "Limão",
+      "Coentro fresco",
+      "Sal e pimenta"
+    ],
+    "instrucoes": [
+      "Cozinhe o feijão vermelho até ficar macio.",
+      "Deixe esfriar completamente.",
+      "Pique todos os vegetais em cubos pequenos.",
+      "Misture o feijão com os vegetais em uma tigela.",
+      "Tempere com azeite, suco de limão, sal e pimenta.",
+      "Adicione coentro fresco picado.",
+      "Deixe na geladeira por 30 minutos.",
+      "Ajuste o tempero antes de servir.",
+      "Sirva gelado como entrada ou acompanhamento.",
+      "Decore com folhas de coentro."
+    ],
+    "dicas": [
+      "Pode adicionar milho verde para mais cor.",
+      "Experimente com abacate picado.",
+      "Ótima opção vegetariana rica em proteínas.",
+      "Serve como recheio para tacos.",
+      "Dura até 3 dias na geladeira."
+    ],
+    "tempoPreparo": "30 minutos",
+    "dificuldade": "Fácil",
+    "porcoes": "4 porções",
+    "categoria": "lanche",
+    "produto": "Feijão Vermelho Barbalho"
+  },
+  {
+    "id": "arroz-agulhinha-1",
+    "titulo": "Arroz Branco Soltinho Perfeito*",
+    "descricao": "Arroz agulhinha tipo 1 soltinho e aromático para o dia a dia.",
+    "ingredientes": [
+      "2 xícaras de Arroz Agulhinha Tipo 1 Barbalho",
+      "4 xícaras de água fervente",
+      "1 cebola pequena picada",
+      "2 dentes de alho amassados",
+      "2 colheres (sopa) de óleo",
+      "1 colher (chá) de sal"
+    ],
+    "instrucoes": [
+      "Lave o arroz em água corrente até a água sair clara.",
+      "Aqueça o óleo em uma panela.",
+      "Refogue o alho e a cebola até dourarem.",
+      "Adicione o arroz e refogue por 2 minutos.",
+      "Acrescente a água fervente e o sal.",
+      "Deixe cozinhar em fogo alto até secar a água da superfície.",
+      "Abaixe o fogo, tampe e cozinhe por 15 minutos.",
+      "Desligue e deixe descansar tampado por 5 minutos.",
+      "Solte com um garfo antes de servir.",
+      "Sirva quente acompanhado de feijão."
+    ],
+    "dicas": [
+      "Lavar bem o arroz garante grãos mais soltos.",
+      "Água fervente acelera o cozimento.",
+      "Não mexa o arroz durante o cozimento.",
+      "Use água na proporção 2:1 (2 partes de água para 1 de arroz).",
+      "Adicione folha de louro para aroma especial."
+    ],
+    "tempoPreparo": "30 minutos",
+    "dificuldade": "Fácil",
+    "porcoes": "6 porções",
+    "categoria": "almoço",
+    "produto": "Arroz Agulhinha Tipo 1 Barbalho"
+  },
+  {
+    "id": "arroz-agulhinha-2",
+    "titulo": "Risoto de Frango Cremoso*",
+    "descricao": "Risoto italiano com arroz agulhinha e frango desfiado.",
+    "ingredientes": [
+      "2 xícaras de Arroz Agulhinha Tipo 1 Barbalho",
+      "300g de peito de frango",
+      "1 cebola picada",
+      "2 dentes de alho",
+      "1 litro de caldo de galinha",
+      "100ml de vinho branco",
+      "50g de queijo parmesão ralado",
+      "2 colheres (sopa) de manteiga",
+      "Sal e pimenta",
+      "Salsinha picada"
+    ],
+    "instrucoes": [
+      "Cozinhe e desfie o peito de frango.",
+      "Aqueça a manteiga e refogue cebola e alho.",
+      "Adicione o arroz e refogue por 2 minutos.",
+      "Acrescente o vinho e deixe evaporar.",
+      "Comece a adicionar o caldo quente, uma concha de cada vez.",
+      "Mexa constantemente até o caldo ser absorvido.",
+      "Continue adicionando caldo até o arroz ficar al dente (cerca de 20 minutos).",
+      "Adicione o frango desfiado.",
+      "Finalize com parmesão e manteiga.",
+      "Sirva imediatamente polvilhado com salsinha."
+    ],
+    "dicas": [
+      "O segredo é mexer sempre para soltar o amido.",
+      "Mantenha o caldo sempre quente.",
+      "Pode substituir frango por cogumelos.",
+      "Adicione ervilhas para mais cor.",
+      "Sirva com vinho branco gelado."
+    ],
+    "tempoPreparo": "45 minutos",
+    "dificuldade": "Média",
+    "porcoes": "4 porções",
+    "categoria": "jantar",
+    "produto": "Arroz Agulhinha Tipo 1 Barbalho"
+  },
+  {
+    "id": "arroz-agulhinha-3",
+    "titulo": "Arroz à Grega Colorido*",
+    "descricao": "Arroz com legumes variados e passas, estilo grego.",
+    "ingredientes": [
+      "2 xícaras de Arroz Agulhinha Tipo 1 Barbalho",
+      "1 cenoura em cubos",
+      "1 xícara de ervilhas",
+      "1 xícara de milho verde",
+      "1/2 xícara de passas",
+      "1 cebola picada",
+      "2 dentes de alho",
+      "4 xícaras de água",
+      "Sal e azeite"
+    ],
+    "instrucoes": [
+      "Refogue cebola e alho no azeite.",
+      "Adicione a cenoura e refogue por 3 minutos.",
+      "Acrescente o arroz e refogue.",
+      "Coloque água fervente e sal.",
+      "Cozinhe por 10 minutos em fogo médio.",
+      "Adicione ervilhas, milho e passas.",
+      "Continue cozinhando até secar.",
+      "Tampe e deixe descansar por 5 minutos.",
+      "Solte com um garfo.",
+      "Sirva quente ou frio como salada."
+    ],
+    "dicas": [
+      "Pode adicionar azeitonas picadas.",
+      "Fica delicioso com amêndoas torradas.",
+      "Sirva com carnes assadas ou grelhadas.",
+      "Ótima opção para marmitas.",
+      "Adicione pimentão para mais cor."
+    ],
+    "tempoPreparo": "35 minutos",
+    "dificuldade": "Fácil",
+    "porcoes": "6 porções",
+    "categoria": "almoço",
+    "produto": "Arroz Agulhinha Tipo 1 Barbalho"
+  },
+  {
+    "id": "fuba-mimoso-1",
+    "titulo": "Bolo de Fubá Cremoso da Vovó*",
+    "descricao": "Bolo tradicional de fubá, cremoso e aromático.",
+    "ingredientes": [
+      "2 xícaras de Fubá Mimoso Barbalho",
+      "2 xícaras de açúcar",
+      "3 ovos",
+      "1 xícara de óleo",
+      "3 xícaras de leite",
+      "1 colher (sopa) de fermento em pó",
+      "1 pitada de sal",
+      "100g de queijo ralado",
+      "1 colher (sopa) de manteiga para untar"
+    ],
+    "instrucoes": [
+      "Bata no liquidificador ovos, açúcar, óleo e leite.",
+      "Adicione o fubá aos poucos, batendo bem.",
+      "Acrescente o queijo ralado e o sal.",
+      "Por último, adicione o fermento e bata rapidamente.",
+      "Unte uma forma com manteiga e farinha.",
+      "Despeje a massa na forma.",
+      "Leve ao forno preaquecido a 180°C por 40-45 minutos.",
+      "Teste com palito: deve sair limpo.",
+      "Deixe esfriar antes de desenformar.",
+      "Sirva polvilhado com açúcar e canela."
+    ],
+    "dicas": [
+      "Pode substituir queijo por coco ralado.",
+      "Adicione goiabada em cubos na massa.",
+      "Sirva com café quentinho.",
+      "Fica mais cremoso se usar leite integral.",
+      "Dura até 5 dias em recipiente fechado."
+    ],
+    "tempoPreparo": "1 hora",
+    "dificuldade": "Fácil",
+    "porcoes": "12 porções",
+    "categoria": "lanche",
+    "produto": "Fubá Mimoso Barbalho"
+  },
+  {
+    "id": "fuba-mimoso-2",
+    "titulo": "Polenta Cremosa com Queijo*",
+    "descricao": "Polenta macia e cremosa gratinada com queijo.",
+    "ingredientes": [
+      "2 xícaras de Fubá Mimoso Barbalho",
+      "6 xícaras de água",
+      "200g de queijo mussarela",
+      "50g de queijo parmesão ralado",
+      "3 colheres (sopa) de manteiga",
+      "1 colher (chá) de sal",
+      "Pimenta-do-reino a gosto"
+    ],
+    "instrucoes": [
+      "Ferva a água com sal.",
+      "Adicione o fubá aos poucos, mexendo sempre.",
+      "Cozinhe em fogo baixo por 20 minutos, mexendo sempre.",
+      "Adicione a manteiga e o queijo parmesão.",
+      "Despeje em uma forma untada.",
+      "Cubra com fatias de mussarela.",
+      "Leve ao forno a 200°C por 15 minutos.",
+      "Gratine até o queijo dourar.",
+      "Deixe descansar por 5 minutos.",
+      "Corte em quadrados e sirva quente."
+    ],
+    "dicas": [
+      "Pode servir com molho de tomate.",
+      "Adicione ervas finas ao cozinhar.",
+      "Sirva como acompanhamento de carnes.",
+      "Substitua água por leite para mais cremosidade.",
+      "Grelhe as fatias para uma textura crocante."
+    ],
+    "tempoPreparo": "45 minutos",
+    "dificuldade": "Média",
+    "porcoes": "8 porções",
+    "categoria": "jantar",
+    "produto": "Fubá Mimoso Barbalho"
+  },
+  {
+    "id": "farinha-milho-1",
+    "titulo": "Farofa de Bacon com Banana*",
+    "descricao": "Farofa crocante com bacon e banana da terra.",
+    "ingredientes": [
+      "2 xícaras de Farinha de Milho Barbalho",
+      "200g de bacon em cubos",
+      "2 bananas da terra",
+      "1 cebola picada",
+      "2 dentes de alho",
+      "2 ovos cozidos picados",
+      "Cheiro-verde",
+      "Sal a gosto"
+    ],
+    "instrucoes": [
+      "Frite o bacon até ficar crocante.",
+      "Reserve o bacon e use a gordura para fritar as bananas fatiadas.",
+      "Retire as bananas e reserve.",
+      "Na mesma panela, refogue cebola e alho.",
+      "Adicione a farinha de milho aos poucos.",
+      "Mexa constantemente até dourar levemente.",
+      "Acrescente bacon, banana e ovos picados.",
+      "Tempere com sal.",
+      "Finalize com cheiro-verde.",
+      "Sirva quente com churrasco."
+    ],
+    "dicas": [
+      "Use bananas bem maduras para adoçar.",
+      "Pode adicionar passas e azeitonas.",
+      "Ótimo acompanhamento para feijoada.",
+      "Adicione calabresa frita picada.",
+      "Sirva com cerveja gelada."
+    ],
+    "tempoPreparo": "30 minutos",
+    "dificuldade": "Fácil",
+    "porcoes": "6 porções",
+    "categoria": "almoço",
+    "produto": "Farinha de Milho Barbalho"
+  },
+  {
+    "id": "canjiquinha-1",
+    "titulo": "Canjiquinha Cremosa com Costelinha*",
+    "descricao": "Prato mineiro tradicional com canjiquinha e costelinha suína.",
+    "ingredientes": [
+      "2 xícaras de Canjiquinha Barbalho",
+      "500g de costela suína",
+      "1 cebola picada",
+      "3 dentes de alho",
+      "2 tomates picados",
+      "1 folha de louro",
+      "6 xícaras de água",
+      "Sal e pimenta",
+      "Cheiro-verde"
+    ],
+    "instrucoes": [
+      "Tempere a costela com sal, alho e pimenta.",
+      "Cozinhe a costela na panela de pressão por 30 minutos.",
+      "Retire a costela e reserve o caldo.",
+      "Lave a canjiquinha em água corrente.",
+      "Refogue cebola, alho e tomate.",
+      "Adicione a canjiquinha e refogue por 2 minutos.",
+      "Acrescente o caldo da costela (complete 6 xícaras).",
+      "Cozinhe por 40 minutos em fogo baixo, mexendo sempre.",
+      "Adicione a costela cortada.",
+      "Finalize com cheiro-verde e sirva quente."
+    ],
+    "dicas": [
+      "Pode substituir costela por linguiça.",
+      "Adicione bacon para mais sabor.",
+      "Sirva com couve refogada.",
+      "Fica ainda melhor no dia seguinte.",
+      "Congela muito bem."
+    ],
+    "tempoPreparo": "1h 30min",
+    "dificuldade": "Média",
+    "porcoes": "6 porções",
+    "categoria": "almoço",
+    "produto": "Canjiquinha Barbalho"
+  },
+  {
+    "id": "milho-pipoca-1",
+    "titulo": "Pipoca Doce Caramelada Gourmet*",
+    "descricao": "Pipoca caramelizada crocante e irresistível.",
+    "ingredientes": [
+      "1 xícara de Milho de Pipoca Premium Barbalho",
+      "1 xícara de açúcar",
+      "3 colheres (sopa) de manteiga",
+      "1/2 xícara de água",
+      "1 pitada de sal",
+      "2 colheres (sopa) de óleo para estourar"
+    ],
+    "instrucoes": [
+      "Estoure o milho de pipoca no óleo e reserve.",
+      "Em uma panela, misture açúcar, água e manteiga.",
+      "Leve ao fogo médio até formar uma calda dourada.",
+      "Adicione a pipoca estourada na calda.",
+      "Mexa rapidamente para cobrir toda a pipoca.",
+      "Despeje em uma forma untada.",
+      "Deixe esfriar completamente.",
+      "Quebre em pedaços.",
+      "Armazene em pote hermético.",
+      "Dura até 1 semana."
+    ],
+    "dicas": [
+      "Adicione amendoim torrado à calda.",
+      "Experimente fazer com chocolate derretido.",
+      "Pode colorir a calda com corante alimentício.",
+      "Sirva em saquinhos como lembrancinha.",
+      "Adicione canela em pó para aroma."
+    ],
+    "tempoPreparo": "25 minutos",
+    "dificuldade": "Fácil",
+    "porcoes": "8 porções",
+    "categoria": "lanche",
+    "produto": "Milho de Pipoca Premium Barbalho"
+  },
+  {
+    "id": "farinha-mandioca-1",
+    "titulo": "Farofa Completa de Natal*",
+    "descricao": "Farofa especial com frutas secas e castanhas para festas.",
+    "ingredientes": [
+      "3 xícaras de Farinha de Mandioca Barbalho",
+      "200g de bacon",
+      "100g de linguiça calabresa",
+      "1/2 xícara de passas",
+      "1/2 xícara de ameixa seca",
+      "1/2 xícara de castanha do Pará",
+      "1 cebola",
+      "2 dentes de alho",
+      "Cheiro-verde e sal"
+    ],
+    "instrucoes": [
+      "Frite o bacon e a linguiça, reserve.",
+      "Na gordura, refogue cebola e alho.",
+      "Adicione a farinha aos poucos, tostando levemente.",
+      "Acrescente bacon e linguiça picados.",
+      "Adicione passas e ameixas picadas.",
+      "Junte as castanhas picadas grosseiramente.",
+      "Tempere com sal.",
+      "Finalize com cheiro-verde.",
+      "Mexa bem para misturar tudo.",
+      "Sirva quente com peru ou chester."
+    ],
+    "dicas": [
+      "Prepare no dia anterior para apurar sabor.",
+      "Pode adicionar damasco picado.",
+      "Use manteiga para tostar a farinha.",
+      "Sirva com arroz à grega.",
+      "Congela muito bem."
+    ],
+    "tempoPreparo": "40 minutos",
+    "dificuldade": "Média",
+    "porcoes": "10 porções",
+    "categoria": "almoço",
+    "produto": "Farinha de Mandioca Barbalho"
+  },
+  {
+    "id": "tapioca-1",
+    "titulo": "Tapioca Recheada Quatro Queijos*",
+    "descricao": "Tapioca cremosa com recheio de queijos nobres.",
+    "ingredientes": [
+      "1 xícara de Mistura para Tapioca Barbalho",
+      "50g de queijo mussarela",
+      "50g de queijo prato",
+      "50g de queijo parmesão",
+      "50g de queijo provolone",
+      "Orégano a gosto",
+      "Azeite para untar"
+    ],
+    "instrucoes": [
+      "Aqueça uma frigideira antiaderente.",
+      "Polvilhe a massa de tapioca formando um círculo.",
+      "Aguarde 1 minuto até as bordas soltarem.",
+      "Distribua os queijos ralados sobre metade da tapioca.",
+      "Polvilhe orégano.",
+      "Dobre ao meio formando meia lua.",
+      "Deixe derreter o queijo por 1 minuto.",
+      "Vire para aquecer o outro lado.",
+      "Retire quando o queijo estiver derretido.",
+      "Sirva imediatamente."
+    ],
+    "dicas": [
+      "Não precisa adicionar água, a massa já vem pronta.",
+      "Experimente com recheio doce (banana com canela).",
+      "Adicione peito de peru ao recheio.",
+      "Sirva com suco natural.",
+      "Pode fazer no café da manhã."
+    ],
+    "tempoPreparo": "10 minutos",
+    "dificuldade": "Fácil",
+    "porcoes": "2 porções",
+    "categoria": "café da manhã",
+    "produto": "Mistura para Tapioca Barbalho"
+  },
+  {
+    "id": "trigo-quibe-1",
+    "titulo": "Quibe Assado Suculento*",
+    "descricao": "Quibe de forno com recheio de carne temperada.",
+    "ingredientes": [
+      "2 xícaras de Trigo para Quibe Barbalho",
+      "500g de carne moída",
+      "1 cebola grande",
+      "Hortelã fresca",
+      "Sal, pimenta e cominho",
+      "1/2 xícara de azeite",
+      "Recheio: carne moída refogada com cebola e pinhões"
+    ],
+    "instrucoes": [
+      "Hidrate o trigo em água por 30 minutos e escorra bem.",
+      "Bata no processador: trigo, cebola, hortelã, sal e pimenta.",
+      "Adicione metade da carne moída crua e bata novamente.",
+      "Divida a massa em duas partes.",
+      "Forre uma forma com metade da massa.",
+      "Cubra com o recheio de carne refogada.",
+      "Tampe com a outra metade da massa.",
+      "Corte em losangos e regue com azeite.",
+      "Asse a 180°C por 40 minutos até dourar.",
+      "Sirva quente com iogurte natural."
+    ],
+    "dicas": [
+      "Use carne magra para melhor textura.",
+      "Adicione pinhões ao recheio.",
+      "Pode fazer bolinhas fritas também.",
+      "Sirva com salada de pepino.",
+      "Congela muito bem antes de assar."
+    ],
+    "tempoPreparo": "1h 15min",
+    "dificuldade": "Média",
+    "porcoes": "8 porções",
+    "categoria": "almoço",
+    "produto": "Trigo para Quibe Barbalho"
+  },
+  {
+    "id": "macarrao-espaguete-1",
+    "titulo": "Espaguete à Carbonara Clássica*",
+    "descricao": "Massa italiana com molho cremoso de ovos e bacon.",
+    "ingredientes": [
+      "500g de Macarrão Espaguete Sêmola com Ovos Barbalho",
+      "200g de bacon em cubos",
+      "4 gemas de ovos",
+      "100g de queijo parmesão ralado",
+      "Sal e pimenta-do-reino",
+      "Azeite extra virgem",
+      "Salsinha picada"
+    ],
+    "instrucoes": [
+      "Cozinhe o macarrão al dente em água com sal.",
+      "Frite o bacon até ficar crocante.",
+      "Bata as gemas com parmesão, sal e pimenta.",
+      "Escorra o macarrão reservando 1 xícara da água do cozimento.",
+      "Adicione o macarrão quente ao bacon (fogo desligado).",
+      "Despeje a mistura de gemas mexendo rapidamente.",
+      "Adicione água do cozimento aos poucos até obter cremosidade.",
+      "Mexa bem para formar um molho cremoso.",
+      "Tempere com pimenta-do-reino moída na hora.",
+      "Sirva imediatamente com parmesão extra."
+    ],
+    "dicas": [
+      "Não deixe as gemas cozinharem demais (vai embolar).",
+      "O calor do macarrão cozinha as gemas.",
+      "Use bacon de boa qualidade.",
+      "Sirva imediatamente, não esquenta bem.",
+      "Acompanhe com vinho branco."
+    ],
+    "tempoPreparo": "25 minutos",
+    "dificuldade": "Média",
+    "porcoes": "4 porções",
+    "categoria": "jantar",
+    "produto": "Macarrão Espaguete Sêmola com Ovos Barbalho"
+  },
+  {
+    "id": "macarrao-penne-1",
+    "titulo": "Penne ao Molho Quatro Queijos*",
+    "descricao": "Massa penne gratinada com molho cremoso de queijos.",
+    "ingredientes": [
+      "500g de Macarrão Penne Sêmola com Ovos Barbalho",
+      "200ml de creme de leite",
+      "100g de queijo gorgonzola",
+      "100g de mussarela",
+      "50g de parmesão",
+      "50g de provolone",
+      "2 colheres (sopa) de manteiga",
+      "Sal, pimenta e noz-moscada",
+      "Salsinha"
+    ],
+    "instrucoes": [
+      "Cozinhe o penne al dente.",
+      "Derreta a manteiga em uma panela.",
+      "Adicione o creme de leite e aqueça.",
+      "Acrescente os queijos picados aos poucos.",
+      "Mexa até derreter completamente.",
+      "Tempere com sal, pimenta e noz-moscada.",
+      "Misture o macarrão ao molho.",
+      "Transfira para um refratário.",
+      "Polvilhe parmesão e leve ao forno para gratinar.",
+      "Sirva quente polvilhado com salsinha."
+    ],
+    "dicas": [
+      "Pode substituir gorgonzola por catupiry.",
+      "Adicione brócolis cozido ao molho.",
+      "Use parmesão ralado fresco.",
+      "Gratine até formar uma casquinha dourada.",
+      "Sirva com salada verde."
+    ],
+    "tempoPreparo": "35 minutos",
     "dificuldade": "Fácil",
     "porcoes": "4 porções",
     "categoria": "jantar",
-    "produto": "Feijão Carioca Premium Barbalho"
+    "produto": "Macarrão Penne Sêmola com Ovos Barbalho"
+  },
+  {
+    "id": "macarrao-parafuso-1",
+    "titulo": "Salada de Macarrão Parafuso Colorida*",
+    "descricao": "Salada fria refrescante com legumes e molho especial.",
+    "ingredientes": [
+      "500g de Macarrão Parafuso Sêmola com Ovos Barbalho",
+      "2 tomates picados",
+      "1 pepino em cubos",
+      "1 pimentão amarelo",
+      "1 cenoura ralada",
+      "Azeitonas pretas",
+      "200g de mussarela em cubos",
+      "Azeite, limão e ervas finas",
+      "Sal e pimenta"
+    ],
+    "instrucoes": [
+      "Cozinhe o macarrão al dente e deixe esfriar.",
+      "Pique todos os vegetais em cubos pequenos.",
+      "Corte a mussarela em cubinhos.",
+      "Misture tudo em uma saladeira grande.",
+      "Tempere com azeite, limão, sal e pimenta.",
+      "Adicione ervas finas a gosto.",
+      "Leve à geladeira por 1 hora.",
+      "Ajuste o tempero antes de servir.",
+      "Decore com azeitonas.",
+      "Sirva gelado como entrada."
+    ],
+    "dicas": [
+      "Adicione presunto picado.",
+      "Experimente com molho de mostarda e mel.",
+      "Ótima opção para piqueniques.",
+      "Pode fazer com maionese temperada.",
+      "Dura 2 dias na geladeira."
+    ],
+    "tempoPreparo": "30 minutos",
+    "dificuldade": "Fácil",
+    "porcoes": "6 porções",
+    "categoria": "lanche",
+    "produto": "Macarrão Parafuso Sêmola com Ovos Barbalho"
+  },
+  {
+    "id": "lamen-galinha-1",
+    "titulo": "Lámen Gourmet de Galinha com Legumes*",
+    "descricao": "Lámen incrementado com legumes frescos e ovo cozido.",
+    "ingredientes": [
+      "1 pacote de Macarrão Instantâneo Sabor Galinha Barbalho",
+      "1 cenoura em tiras finas",
+      "1/2 repolho roxo fatiado",
+      "100g de cogumelos",
+      "2 ovos cozidos",
+      "Cebolinha verde",
+      "1 colher (chá) de gergelim",
+      "Molho shoyu",
+      "600ml de água"
+    ],
+    "instrucoes": [
+      "Ferva a água em uma panela.",
+      "Adicione o macarrão e cozinhe por 2 minutos.",
+      "Acrescente cenoura e cogumelos.",
+      "Cozinhe por mais 1 minuto.",
+      "Adicione o tempero do lámen.",
+      "Coloque o repolho e desligue o fogo.",
+      "Transfira para uma tigela funda.",
+      "Corte o ovo ao meio e coloque por cima.",
+      "Finalize com cebolinha e gergelim.",
+      "Sirva imediatamente bem quente."
+    ],
+    "dicas": [
+      "Adicione peito de frango desfiado.",
+      "Experimente com camarões.",
+      "Use legumes variados ao gosto.",
+      "Adicione pimenta sriracha para ardência.",
+      "Sirva em tigelas japonesas."
+    ],
+    "tempoPreparo": "15 minutos",
+    "dificuldade": "Fácil",
+    "porcoes": "1 porção",
+    "categoria": "jantar",
+    "produto": "Macarrão Instantâneo Sabor Galinha Barbalho"
+  },
+  {
+    "id": "lamen-carne-1",
+    "titulo": "Sopa Oriental de Lámen com Carne*",
+    "descricao": "Sopa quente e reconfortante com macarrão instantâneo.",
+    "ingredientes": [
+      "2 pacotes de Macarrão Instantâneo Sabor Carne Barbalho",
+      "200g de carne bovina em tiras",
+      "1 litro de caldo de carne",
+      "1 cebola roxa",
+      "2 dentes de alho",
+      "Gengibre ralado",
+      "Molho de soja",
+      "Cebolinha e coentro"
+    ],
+    "instrucoes": [
+      "Refogue a carne com alho e gengibre.",
+      "Adicione o caldo de carne e ferva.",
+      "Acrescente os temperos do lámen.",
+      "Adicione o macarrão e cozinhe por 3 minutos.",
+      "Tempere com molho de soja.",
+      "Adicione a cebola roxa fatiada.",
+      "Cozinhe por mais 1 minuto.",
+      "Sirva em tigelas fundas.",
+      "Finalize com cebolinha e coentro.",
+      "Sirva bem quente."
+    ],
+    "dicas": [
+      "Use cortes macios de carne.",
+      "Adicione brócolis ou espinafre.",
+      "Experimente com cogumelos shitake.",
+      "Sirva com pão de alho.",
+      "Ótimo para dias frios."
+    ],
+    "tempoPreparo": "20 minutos",
+    "dificuldade": "Fácil",
+    "porcoes": "2 porções",
+    "categoria": "jantar",
+    "produto": "Macarrão Instantâneo Sabor Carne Barbalho"
+  },
+  {
+    "id": "combo-arroz-feijao-1",
+    "titulo": "Prato Feito Completo Barbalho*",
+    "descricao": "Combinação perfeita de arroz, feijão, farofa e bife.",
+    "ingredientes": [
+      "2 xícaras de Arroz Agulhinha Tipo 1 Barbalho",
+      "2 xícaras de Feijão Carioca Premium Barbalho",
+      "1 xícara de Farinha de Mandioca Barbalho",
+      "4 bifes de contra-filé",
+      "2 ovos fritos",
+      "Bacon, cebola e alho",
+      "Temperos diversos"
+    ],
+    "instrucoes": [
+      "Prepare o arroz branco soltinho.",
+      "Cozinhe o feijão e faça um refogado.",
+      "Prepare uma farofa com bacon e ovos.",
+      "Tempere e grelhe os bifes.",
+      "Frite os ovos com gemas moles.",
+      "Monte o prato: arroz, feijão, bife, farofa e ovo.",
+      "Adicione vinagrete de tomate.",
+      "Sirva com salada de alface.",
+      "Acompanhe com batata frita.",
+      "Finalize com pimenta malagueta."
+    ],
+    "dicas": [
+      "Use produtos Barbalho para melhor resultado.",
+      "Prepare tudo fresco na hora de servir.",
+      "Varie as proteínas (frango, peixe, linguiça).",
+      "Sirva com suco natural.",
+      "Ideal para almoço de domingo."
+    ],
+    "tempoPreparo": "1h 30min",
+    "dificuldade": "Média",
+    "porcoes": "4 porções",
+    "categoria": "almoço",
+    "produto": "Combinação Arroz e Feijão Barbalho"
+  },
+  {
+    "id": "flocao-milho-1",
+    "titulo": "Cuscuz Nordestino Tradicional*",
+    "descricao": "Cuscuz de flocão de milho com leite de coco.",
+    "ingredientes": [
+      "2 xícaras de Flocão de Milho Barbalho",
+      "1 xícara de leite de coco",
+      "1 xícara de água",
+      "1 colher (sopa) de manteiga",
+      "1 colher (chá) de sal",
+      "Coco ralado para decorar"
+    ],
+    "instrucoes": [
+      "Misture o flocão com água, leite de coco e sal.",
+      "Deixe hidratar por 10 minutos.",
+      "Adicione a manteiga e misture bem.",
+      "Coloque na cuscuzeira untada.",
+      "Cozinhe no vapor por 20 minutos.",
+      "Desenforme ainda quente.",
+      "Decore com coco ralado.",
+      "Sirva com manteiga.",
+      "Pode acompanhar com carne de sol.",
+      "Delicioso no café da manhã."
+    ],
+    "dicas": [
+      "Não deixe secar demais.",
+      "Sirva com queijo coalho.",
+      "Pode fazer com leite comum.",
+      "Adicione erva-doce para aroma.",
+      "Fica ótimo com ovo frito."
+    ],
+    "tempoPreparo": "35 minutos",
+    "dificuldade": "Fácil",
+    "porcoes": "6 porções",
+    "categoria": "café da manhã",
+    "produto": "Flocão de Milho Barbalho"
+  },
+  {
+    "id": "farofa-pronta-bacon-1",
+    "titulo": "Farofa Pronta Bacon Incrementada*",
+    "descricao": "Farofa pronta com banana e ovo para churrascos.",
+    "ingredientes": [
+      "1 pacote de Farofa Pronta Bacon Barbalho",
+      "2 bananas da terra",
+      "2 ovos cozidos",
+      "Azeitonas verdes",
+      "Passas (opcional)",
+      "2 colheres (sopa) de manteiga"
+    ],
+    "instrucoes": [
+      "Derreta a manteiga em uma frigideira.",
+      "Frite as bananas em rodelas até dourarem.",
+      "Adicione a farofa pronta e mexa bem.",
+      "Aqueça por 3 minutos mexendo sempre.",
+      "Pique os ovos cozidos.",
+      "Misture ovos, azeitonas e passas à farofa.",
+      "Ajuste o sal se necessário.",
+      "Mexa delicadamente.",
+      "Retire do fogo.",
+      "Sirva quente com carnes."
+    ],
+    "dicas": [
+      "Produto já vem temperado, não exagere no sal.",
+      "Pode adicionar bacon extra.",
+      "Ótima para festas e churrascos.",
+      "Sirva com cerveja gelada.",
+      "Prepare próximo da hora de servir."
+    ],
+    "tempoPreparo": "15 minutos",
+    "dificuldade": "Fácil",
+    "porcoes": "4 porções",
+    "categoria": "almoço",
+    "produto": "Farofa Pronta Bacon Barbalho"
   }
-  
 ]
