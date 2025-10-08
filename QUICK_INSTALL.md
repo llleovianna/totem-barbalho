@@ -2,6 +2,13 @@
 
 ## 🎯 Para Usuários Finais (Eventos/Feiras)
 
+### ✅ Pré-requisitos:
+- **Windows 10 ou superior** (64-bit)
+- **500 MB de espaço livre**
+- **Conexão com internet** (para gerar receitas)
+- ❌ **NÃO** precisa instalar Node.js (já vem embutido!)
+- ❌ **NÃO** precisa instalar dependências
+
 ### Passo 1️⃣: Receber o Instalador
 Você receberá um arquivo chamado:
 - `totem-barbalho-setup-1.0.0.exe` (240 MB)

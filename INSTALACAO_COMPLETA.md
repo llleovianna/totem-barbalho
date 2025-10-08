@@ -37,9 +37,12 @@ O **Totem Barbalho** é um aplicativo desktop (Electron) que funciona como um to
 ## 🏭 PARTE 1: INSTALAÇÃO PARA PRODUÇÃO
 
 ### 📥 Pré-requisitos
-- Windows 10 ou superior (64-bit)
-- 500 MB de espaço livre
-- Conexão com internet (para usar IA Gemini)
+- **Windows 10 ou superior** (64-bit)
+- **500 MB de espaço livre** em disco
+- **Conexão com internet** (para usar IA Gemini)
+- ❌ **NÃO** precisa instalar Node.js (já vem embutido no instalador!)
+- ❌ **NÃO** precisa instalar npm ou outras dependências
+- ❌ **NÃO** precisa conhecimento técnico
 
 ### 📦 Passo 1: Gerar o Instalador (Máquina de Desenvolvimento)
 

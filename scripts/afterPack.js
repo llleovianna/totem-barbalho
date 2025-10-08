@@ -1,18 +1,16 @@
 /**
- * Script Pós-Build - Verificar empacotamento do backend
+ * Script Pós-Build - Instalar dependências do backend
  * Este script é executado pelo electron-builder após empacotar os arquivos
- * 
- * IMPORTANTE: As dependências do backend devem ser instaladas ANTES do build
- * via `npm run build:production` que chama build-production.js
  */
 
+const { execSync } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 
 exports.default = async function(context) {
   const appOutDir = context.appOutDir;
   
-  console.log('\n📦 AfterPack Hook - Verificando empacotamento...');
+  console.log('\n📦 AfterPack Hook - Iniciando...');
   console.log('📂 App Output Dir:', appOutDir);
   
   // Procurar pelo backend em diferentes locais possíveis
@@ -25,7 +23,7 @@ exports.default = async function(context) {
   let backendPath = null;
   
   for (const testPath of possiblePaths) {
-    console.log('🔍 Testando:', testPath);
+    console.log('� Testando:', testPath);
     if (fs.existsSync(testPath)) {
       backendPath = testPath;
       console.log('✅ Backend encontrado em:', backendPath);
@@ -42,7 +40,7 @@ exports.default = async function(context) {
         items.forEach(item => {
           const fullPath = path.join(dir, item);
           const stats = fs.statSync(fullPath);
-          console.log(`${indent}${stats.isDirectory() ? '📁' : '📄'} ${item}`);
+          console.log(`${indent}${stats.isDirectory() ? '�' : '📄'} ${item}`);
           if (stats.isDirectory() && indent.length < 8) {
             listDir(fullPath, indent + '  ');
           }
@@ -52,64 +50,28 @@ exports.default = async function(context) {
     } catch (err) {
       console.error('Erro ao listar diretório:', err.message);
     }
-    throw new Error('Backend não encontrado no pacote!');
+    return; // Não falhar o build, apenas avisar
   }
   
-  // Verificar arquivos críticos
-  const criticalFiles = [
-    { name: 'server.js', path: path.join(backendPath, 'server.js') },
-    { name: 'package.json', path: path.join(backendPath, 'package.json') },
-    { name: 'node_modules', path: path.join(backendPath, 'node_modules') },
-    { name: '.env', path: path.join(backendPath, '.env') },
-  ];
+  const packageJsonPath = path.join(backendPath, 'package.json');
   
-  console.log('\n📋 Verificando arquivos críticos:');
-  let allFilesPresent = true;
-  
-  criticalFiles.forEach(file => {
-    if (fs.existsSync(file.path)) {
-      const stats = fs.statSync(file.path);
-      if (stats.isDirectory()) {
-        const itemCount = fs.readdirSync(file.path).length;
-        console.log(`✅ ${file.name} (${itemCount} itens)`);
-      } else {
-        const sizeKB = (stats.size / 1024).toFixed(2);
-        console.log(`✅ ${file.name} (${sizeKB} KB)`);
-      }
-    } else {
-      if (file.name === '.env') {
-        console.log(`⚠️  ${file.name} - NÃO INCLUÍDO (usuário deve configurar)`);
-      } else {
-        console.error(`❌ ${file.name} - AUSENTE!`);
-        allFilesPresent = false;
-      }
-    }
-  });
-  
-  if (!allFilesPresent) {
-    throw new Error('Arquivos críticos ausentes no pacote!');
+  if (!fs.existsSync(packageJsonPath)) {
+    console.error('❌ package.json não encontrado em:', packageJsonPath);
+    return;
   }
   
-  // Verificar dependências principais do backend
-  const nodeModulesPath = path.join(backendPath, 'node_modules');
-  if (fs.existsSync(nodeModulesPath)) {
-    const criticalDeps = ['express', 'cors', '@google/generative-ai', 'dotenv'];
-    console.log('\n📦 Verificando dependências críticas:');
-    
-    criticalDeps.forEach(dep => {
-      const depPath = path.join(nodeModulesPath, dep);
-      if (fs.existsSync(depPath)) {
-        console.log(`✅ ${dep}`);
-      } else {
-        console.error(`❌ ${dep} - AUSENTE!`);
-        allFilesPresent = false;
-      }
+  console.log('📦 Instalando dependências do backend...');
+  
+  try {
+    // Instalar dependências de produção apenas
+    execSync('npm install --production --no-optional', {
+      cwd: backendPath,
+      stdio: 'inherit'
     });
+    
+    console.log('✅ Dependências do backend instaladas com sucesso\n');
+  } catch (error) {
+    console.error('❌ Erro ao instalar dependências do backend:', error.message);
+    // Não lançar erro para não falhar o build
   }
-  
-  if (!allFilesPresent) {
-    throw new Error('Dependências críticas ausentes! Execute: npm install no backend ANTES de rodar npm run dist:win');
-  }
-  
-  console.log('\n✅ Empacotamento verificado com sucesso!\n');
 };

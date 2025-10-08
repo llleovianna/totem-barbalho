@@ -1,6 +1,6 @@
 {
   "name": "totem-barbalho-workspace",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Totem Interativo IA Culinária Barbalho - Scripts de automação",
   "main": "electron-main.js",
   "scripts": {
@@ -58,7 +58,7 @@
     "afterPack": "scripts/afterPack.js",
     "files": [
       "backend/**/*",
-      "backend/node_modules/**/*",
+      "!backend/node_modules/**/*",
       "frontend/build/**/*",
       "!frontend/src/**/*",
       "!frontend/public/**/*",
