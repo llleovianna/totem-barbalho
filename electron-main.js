@@ -264,15 +264,26 @@ async function startBackend() {
 
         log('🚀 Spawning Node.js process para backend...');
 
-        // Usar o Node.js embutido do Electron ao invés do Node do sistema
-        // Isso garante que funcione mesmo sem Node instalado na máquina
-        const nodePath = process.execPath; // Caminho do executável do Electron (que contém Node.js)
-        
-        log(`📍 Node.js embutido: ${nodePath}`);
-
-        backendProcess = spawn(nodePath, [backendPath], {
+        backendProcess = spawn('node', [backendPath], {
             stdio: ['ignore', 'pipe', 'pipe'],
             env: env,
+        });
+        
+        // Detectar erro de Node.js não encontrado
+        backendProcess.on('error', (err) => {
+            if (err.code === 'ENOENT') {
+                log('❌ Node.js não encontrado no sistema!', true);
+                showError(
+                    'Node.js Não Instalado',
+                    'O Totem Barbalho requer Node.js instalado no sistema.',
+                    'Por favor, instale o Node.js 18+ em: https://nodejs.org/\n\n' +
+                    'Após instalar, reinicie o aplicativo.'
+                );
+                app.quit();
+            } else {
+                log(`❌ Erro ao iniciar backend: ${err.message}`, true);
+                showError('Erro ao Iniciar Backend', 'Não foi possível iniciar o servidor backend', err.message);
+            }
         });
 
         backendProcess.stdout.on('data', (data) => {
@@ -283,11 +294,6 @@ async function startBackend() {
         backendProcess.stderr.on('data', (data) => {
             const message = data.toString().trim();
             log(`[Backend ERROR] ${message}`, true);
-        });
-
-        backendProcess.on('error', (err) => {
-            log(`❌ Erro no processo backend: ${err.message}`, true);
-            showError('Erro no Backend', 'O backend encontrou um erro', err.message);
         });
 
         backendProcess.on('close', (code) => {

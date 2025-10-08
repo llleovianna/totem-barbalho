@@ -2,12 +2,13 @@
 
 ## 🎯 Para Usuários Finais (Eventos/Feiras)
 
-### ✅ Pré-requisitos:
+### ✅ Pré-requisitos OBRIGATÓRIOS:
 - **Windows 10 ou superior** (64-bit)
-- **500 MB de espaço livre**
+- **500 MB de espaço livre** em disco
 - **Conexão com internet** (para gerar receitas)
-- ❌ **NÃO** precisa instalar Node.js (já vem embutido!)
-- ❌ **NÃO** precisa instalar dependências
+- ⚠️ **Node.js 18+ INSTALADO** (obrigatório!)
+  - **Download**: https://nodejs.org/ (versão LTS)
+  - **Instruções completas**: Ver arquivo `INSTALACAO_NODEJS_OBRIGATORIO.md`
 
 ### Passo 1️⃣: Receber o Instalador
 Você receberá um arquivo chamado:
