@@ -264,7 +264,13 @@ async function startBackend() {
 
         log('🚀 Spawning Node.js process para backend...');
 
-        backendProcess = spawn('node', [backendPath], {
+        // Usar o Node.js embutido no Electron ao invés do Node.js do sistema
+        // process.execPath aponta para o executável do Electron que contém Node.js
+        const nodeExecutable = process.execPath;
+        
+        log(`📂 Node executable: ${nodeExecutable}`);
+
+        backendProcess = spawn(nodeExecutable, [backendPath], {
             stdio: ['ignore', 'pipe', 'pipe'],
             env: env,
         });

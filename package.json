@@ -58,7 +58,7 @@
     "afterPack": "scripts/afterPack.js",
     "files": [
       "backend/**/*",
-      "!backend/node_modules/**/*",
+      "backend/node_modules/**/*",
       "frontend/build/**/*",
       "!frontend/src/**/*",
       "!frontend/public/**/*",

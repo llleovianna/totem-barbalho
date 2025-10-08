@@ -102,23 +102,40 @@ cd ../frontend && npm install  # Frontend
 
 ## 🚀 Próximos Passos (Você)
 
-### 1. Gerar o Instalador Final:
+### ⚠️ IMPORTANTE: Correção Aplicada
+
+**Foi identificado e corrigido um erro crítico que impedia o instalador de funcionar em máquinas sem Node.js.**
+
+**Problema:** `Error: spawn node ENOENT` (tela laranja)  
+**Causa:** Node.js não embutido + dependências não incluídas  
+**Status:** ✅ CORRIGIDO
+
+**Leia:** `CORRECAO_ERRO_SPAWN_NODE.md` para detalhes técnicos
+
+### 1. Gerar o Instalador Final (ATUALIZADO):
 
 ```powershell
 # Parar processos existentes
 Get-Process -Name node -ErrorAction SilentlyContinue | Stop-Process -Force
 
+# IMPORTANTE: Instalar dependências do backend
+cd backend
+npm install --production
+cd ..
+
 # Build do frontend
 cd frontend
 npm run build
-
-# Gerar instalador
 cd ..
+
+# Gerar instalador (AGORA INCLUI node_modules)
 npm run dist:win
 
 # Aguardar 5-10 minutos
-# Resultado: dist/totem-barbalho-setup-1.0.0.exe
+# Resultado: dist/Totem Barbalho-Setup-1.0.0.exe (~300-400 MB)
 ```
+
+**⚠️ ATENÇÃO:** O tamanho do instalador aumentou de ~240 MB para ~300-400 MB porque agora inclui as dependências do backend (node_modules).
 
 ### 2. Testar o Instalador:
 
