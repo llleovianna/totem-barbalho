@@ -297,24 +297,183 @@ app.get('/service-status', (req, res) => {
   });
 });
 
+// Helper function to translate dietary restrictions to Portuguese
+function translateRestrictions(restrictions) {
+  const translationMap = {
+    'vegetarian': 'Vegetariano',
+    'vegan': 'Vegano',
+    'gluten-free': 'Sem Glúten',
+    'lactose-free': 'Sem Lactose',
+    'low-sodium': 'Baixo Sódio',
+    'diabetic': 'Diabético'
+  };
+  
+  return (restrictions || []).map(r => translationMap[r] || r);
+}
+
+// Helper function to detect ingredient conflicts with restrictions
+function analyzeIngredientConflicts({ selectedProducts, additionalIngredients, customIngredients, restrictions }) {
+  if (!restrictions || restrictions.length === 0) return { hasConflicts: false, conflicts: [], suggestions: '' };
+  
+  const allIngredients = [
+    ...(selectedProducts?.map(p => p.name.toLowerCase()) || []),
+    ...(additionalIngredients?.map(i => i.toLowerCase()) || []),
+    ...(customIngredients?.map(i => i.toLowerCase()) || [])
+  ];
+  
+  const conflicts = [];
+  const animalProducts = ['frango', 'carne bovina', 'carne suína', 'bacon', 'linguiça', 'peixe', 'camarão', 'ovo', 'ovos'];
+  const dairyProducts = ['queijo', 'leite', 'manteiga', 'creme de leite', 'iogurte', 'requeijão'];
+  const glutenProducts = ['farinha de trigo', 'macarrão', 'pão', 'massa'];
+  
+  restrictions.forEach(restriction => {
+    if (restriction === 'vegan' || restriction === 'vegetarian') {
+      const foundAnimal = allIngredients.filter(ing => 
+        animalProducts.some(ap => ing.includes(ap))
+      );
+      if (foundAnimal.length > 0) {
+        conflicts.push(`${restriction === 'vegan' ? 'Vegano' : 'Vegetariano'}: encontrados produtos de origem animal (${foundAnimal.join(', ')})`);
+      }
+      
+      if (restriction === 'vegan') {
+        const foundDairy = allIngredients.filter(ing => 
+          dairyProducts.some(dp => ing.includes(dp))
+        );
+        if (foundDairy.length > 0) {
+          conflicts.push(`Vegano: encontrados laticínios (${foundDairy.join(', ')})`);
+        }
+      }
+    }
+    
+    if (restriction === 'gluten-free') {
+      const foundGluten = allIngredients.filter(ing => 
+        glutenProducts.some(gp => ing.includes(gp))
+      );
+      if (foundGluten.length > 0) {
+        conflicts.push(`Sem Glúten: encontrados produtos com glúten (${foundGluten.join(', ')})`);
+      }
+    }
+    
+    if (restriction === 'lactose-free') {
+      const foundDairy = allIngredients.filter(ing => 
+        dairyProducts.some(dp => ing.includes(dp))
+      );
+      if (foundDairy.length > 0) {
+        conflicts.push(`Sem Lactose: encontrados laticínios (${foundDairy.join(', ')})`);
+      }
+    }
+  });
+  
+  let suggestions = '';
+  if (conflicts.length > 0) {
+    suggestions = `\n\n⚠️ ATENÇÃO - CONFLITOS DETECTADOS:\n${conflicts.join('\n')}
+\n🔄 AÇÃO OBRIGATÓRIA: Você DEVE substituir TODOS os ingredientes conflitantes por alternativas adequadas às restrições.
+- Para Vegano/Vegetariano: substitua carnes por proteínas vegetais (tofu, grão-de-bico, lentilha, cogumelos), ovos por substitutos (linhaça, chia)
+- Para Sem Lactose: substitua por leite vegetal, queijo vegano, manteiga vegetal
+- Para Sem Glúten: substitua por farinha sem glúten, macarrão de arroz, pão sem glúten`;
+  }
+  
+  return { hasConflicts: conflicts.length > 0, conflicts, suggestions };
+}
+
+// Helper function to get difficulty-specific instructions
+function getDifficultyGuidelines(difficulty) {
+  switch(difficulty.toLowerCase()) {
+    case 'fácil':
+    case 'facil':
+      return `Receita FÁCIL - Use 6-8 passos SIMPLES e DIRETOS. Técnicas básicas (fritar, cozinhar, misturar). Tempo de preparo real: até 30 minutos. Ingredientes fáceis de encontrar.`;
+    case 'médio':
+    case 'medio':
+      return `Receita MÉDIA - Use 8-10 passos com MAIS DETALHES. Inclua 2-3 técnicas intermediárias (refogar, grelhar, marinar). Tempo de preparo real: 30-60 minutos. Pode incluir ingredientes mais específicos.`;
+    case 'difícil':
+    case 'dificil':
+      return `Receita DIFÍCIL - Use 10-15 passos MUITO DETALHADOS e ELABORADOS. Inclua técnicas avançadas (redução, sous-vide, montagem complexa, multitasking). Tempo de preparo real: 1+ hora. Pode exigir equipamentos específicos e ingredientes premium.`;
+    default:
+      return '';
+  }
+}
+
+// Helper function to get portion-specific guidelines
+function getPortionGuidelines(portions) {
+  const portionNumber = parseInt(portions) || 4;
+  if (portionNumber === 1) {
+    return 'Ajuste TODAS as quantidades para 1 PESSOA (reduza drasticamente as medidas).';
+  } else if (portionNumber === 2) {
+    return 'Ajuste TODAS as quantidades para 2 PESSOAS (use medidas pequenas/médias).';
+  } else if (portionNumber >= 6) {
+    return `Ajuste TODAS as quantidades para ${portionNumber}+ PESSOAS (aumente significativamente as medidas, use panelas grandes).`;
+  } else {
+    return `Receita para exatamente ${portions}.`;
+  }
+}
+
 // Helper function to build the AI prompt
 function buildRecipePrompt({ selectedProducts, additionalIngredients, customIngredients, preferences, restrictions }) {
   const products = selectedProducts.map(p => p.name).join(', ');
   const extras = [...(additionalIngredients || []), ...(customIngredients || [])].join(', ');
   const difficulty = preferences?.difficulty || 'Fácil';
-  const time = preferences?.time || '30 minutos';
+  const time = preferences?.time || '30min';  // ✅ CORRIGIDO: usar formato correto
   const portions = preferences?.portions || '4 pessoas';
   const mealType = preferences?.mealType || 'almoço';
-  const restrictionsList = restrictions?.length ? restrictions.join(', ') : 'Nenhuma';
+  
+  // Traduzir restrições para português
+  const translatedRestrictions = translateRestrictions(restrictions);
+  const restrictionsList = translatedRestrictions.length > 0 ? translatedRestrictions.join(', ') : 'Nenhuma';
+  
+  // Analisar conflitos
+  const conflictAnalysis = analyzeIngredientConflicts({ selectedProducts, additionalIngredients, customIngredients, restrictions });
+  
+  // Obter diretrizes específicas
+  const difficultyGuidelines = getDifficultyGuidelines(difficulty);
+  const portionGuidelines = getPortionGuidelines(portions);
+  
+  // Log detalhado para debug
+  console.log('\n📋 ===== CONSTRUÇÃO DO PROMPT =====');
+  console.log('🥘 Produtos Barbalho:', products);
+  console.log('🧂 Ingredientes extras:', extras || 'Nenhum');
+  console.log('⚙️ Preferências:', { difficulty, time, portions, mealType });
+  console.log('🚫 Restrições (original):', restrictions);
+  console.log('🌐 Restrições (traduzido):', restrictionsList);
+  if (conflictAnalysis.hasConflicts) {
+    console.log('⚠️ CONFLITOS DETECTADOS:', conflictAnalysis.conflicts);
+  }
+  console.log('📊 Diretrizes de Dificuldade:', difficultyGuidelines);
+  console.log('👥 Diretrizes de Porções:', portionGuidelines);
+  console.log('===================================\n');
 
-  // Prompt otimizado: estrutura pronta, instruções diretas, menos texto
-  return `Gere APENAS um JSON válido para uma receita culinária Barbalho, preenchendo os campos abaixo. NÃO coloque markdown, nem comentários, nem vírgulas extras. Seja objetivo e direto. Use todos os produtos obrigatórios: ${products}. Ingredientes extras: ${extras}. Configurações: ${mealType}, ${difficulty}, ${time}, ${portions}. Restrições: ${restrictionsList}.
+  // Prompt otimizado com instruções MUITO mais específicas e forçadas
+  return `Você é um chef profissional criando uma receita culinária usando produtos Barbalho. Gere APENAS um JSON válido sem markdown, comentários ou vírgulas extras.
+
+📋 INGREDIENTES OBRIGATÓRIOS:
+- Produtos Barbalho: ${products}
+- Ingredientes extras: ${extras || 'Nenhum'}
+
+⚙️ CONFIGURAÇÕES OBRIGATÓRIAS (RESPEITE ESTRITAMENTE):
+${difficultyGuidelines}
+${portionGuidelines}
+- Tipo de refeição: ${mealType}
+- Tempo de preparo EXATO: ${time}
+
+🚫 RESTRIÇÕES ALIMENTARES (CRÍTICO): ${restrictionsList}
+${conflictAnalysis.suggestions}
+
+🎯 REGRAS OBRIGATÓRIAS:
+1. Use EXATAMENTE os campos do JSON abaixo (sem adicionar ou remover campos)
+2. O número de passos em "instrucoes" DEVE refletir a dificuldade escolhida
+3. As quantidades em "ingredientes" DEVEM estar ajustadas para ${portions}
+4. O "tempoPreparo" DEVE ser EXATAMENTE "${time}"
+5. A "dificuldade" DEVE ser EXATAMENTE "${difficulty}"
+6. Se houver restrições alimentares, SUBSTITUA todos os ingredientes conflitantes por alternativas adequadas
+7. Se houver conflito entre ingredientes selecionados e restrições, PRIORIZE as restrições alimentares
+
+Gere o JSON agora:
+
 {
-  "titulo": "Nome da Receita (até 70 caracteres)",
-  "descricao": "Descrição apetitosa (até 120 caracteres)",
-  "ingredientes": ["10-12 ingredientes, quantidades exatas, incluindo Barbalho"],
-  "instrucoes": ["8-10 passos detalhados, linguagem simples, técnicas culinárias"],
-  "dicas": ["4-5 dicas práticas, nutricionais, de preparo ou variação"],
+  "titulo": "Nome criativo da receita (máximo 70 caracteres)",
+  "descricao": "Descrição apetitosa que mencione os produtos Barbalho (máximo 120 caracteres)",
+  "ingredientes": ["Liste ingredientes com quantidades EXATAS ajustadas para ${portions}, incluindo TODOS os produtos Barbalho"],
+  "instrucoes": ["Passos numerados e detalhados conforme a dificuldade ${difficulty}"],
+  "dicas": ["4-5 dicas práticas, de substituição ou variação"],
   "tempoPreparo": "${time}",
   "dificuldade": "${difficulty}",
   "porcoes": "${portions}",
